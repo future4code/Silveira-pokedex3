@@ -1,10 +1,17 @@
-import './App.css';
-import Router from './Routes/Router';
+import Router from "./Components/Routes/Router";
+import Header from "./Components/Header/Header";
+import { ComponetPokeball } from "./Components/Pokeball/Pokeball";
+
 
 function App() {
   return (
     <div>
-      <Router/>
+      {/* <Router /> */}
+
+      <Header></Header>
+      {/* <div>
+        {ComponetPokeball}
+      </div> */}
 
     </div>
   );

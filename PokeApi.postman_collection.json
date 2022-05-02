@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "f98b00b3-0236-48b8-bf5b-8c8ea30a74a9",
+		"name": "PokeApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllPokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0.",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "offset",
+							"value": "0."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PokemonDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/:id_name",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						":id_name"
+					],
+					"variable": [
+						{
+							"key": "id_name",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DefaultFrontPokemonImage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/:id",
+					"protocol": "https",
+					"host": [
+						"raw",
+						"githubusercontent",
+						"com"
+					],
+					"path": [
+						"PokeAPI",
+						"sprites",
+						"master",
+						"sprites",
+						"pokemon",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DefaultBackPokemonImage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/:id",
+					"protocol": "https",
+					"host": [
+						"raw",
+						"githubusercontent",
+						"com"
+					],
+					"path": [
+						"PokeAPI",
+						"sprites",
+						"master",
+						"sprites",
+						"pokemon",
+						"back",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2.png"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

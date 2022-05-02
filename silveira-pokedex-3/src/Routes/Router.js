@@ -11,7 +11,7 @@ function Router() {
         <Routes>
             <Route index path="/" element={<HomePage/>} />
             <Route path='/pokemon/userpokedex' element={<MyPokeDex/>}/>
-            <Route path='/pokemon/pokedex/details' element={<PokeDetails/>}/>
+            <Route path='/pokemon/pokedexdetails' element={<PokeDetails/>}/>
             <Route path='/pokemon/pokedex' element={<Pokedex/>}/>
         </Routes>
     </BrowserRouter>

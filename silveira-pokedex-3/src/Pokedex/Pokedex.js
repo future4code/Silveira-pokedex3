@@ -1,8 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Card from '../CardPokemon/Card'
 
 function Pokedex() {
   return (
-    <div>Pokedex</div>
+    <div>
+      
+
+      <Link to='/pokemon/userpokedex'><button> Minha Pokedex </button></Link>
+      <Card/>
+    </div>
   )
 }
 

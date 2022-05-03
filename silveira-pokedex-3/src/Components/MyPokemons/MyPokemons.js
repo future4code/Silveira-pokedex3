@@ -8,7 +8,6 @@ function MyPokeDex() {
     <div>
       <Link to='/'><button> Home </button></Link>
       <Link to={-1}><button> Voltar </button></Link>
-      <Card/>
     </div>
   )
 }

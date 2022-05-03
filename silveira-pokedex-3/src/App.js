@@ -1,18 +1,17 @@
-import Router from "./Components/Routes/Router";
-import Header from "./Components/Header/Header";
-import { ComponetPokeball } from "./Components/Pokeball/Pokeball";
-
+// import Router from "./Components/Routes/Router";
+import Card from './Components/CardPokemon/Card';
+import {PokemonList} from './Components/Constants/contexts'
 
 function App() {
+  const objeto = {propriedade: 'qualquer coisa'}
   return (
-    <div>
+  <div>
+      <PokemonList.Provider value={objeto} >
+      <Card/>
+      </PokemonList.Provider>
       {/* <Router /> */}
 
-      <Header></Header>
-      {/* <div>
-        {ComponetPokeball}
-      </div> */}
-
+ 
     </div>
   );
 }

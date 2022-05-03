@@ -1,20 +1,32 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import {ContainerCard} from './styleCard'
-import {PokemonList} from '../Constants/contexts'
+import { ContainerCard } from './styleCard'
+import { PokemonList } from '../Constants/contexts'
 
 function Card() {
-const objeto = useContext(PokemonList) 
+  const params = useContext(PokemonList)
+
+  const arrayPokemons = params.allPokemons && params.allPokemons.map(pokemon => {
+
+    return (
+      <ContainerCard key={pokemon.order}>
+        <p>{pokemon.name}</p>
+        <img src={pokemon.sprites.front_default} />
+        <img src={pokemon.sprites.back_default} />
+
+        <Link to='/pokemon/pokedexdetails'><button> Detalhes pokemon </button></Link>
+        <button> Adicionar </button>
+      </ContainerCard>
+    )
+  })
 
   return (
-    <ContainerCard>
-      {console.log(objeto)}
-       {/* <p>{objeto.propriedade}</p> */}
-      <p>Nome do Pokemon</p>
-     <img />
-        <Link to='/pokemon/pokedexdetails'><button> Detalhes pokemon </button></Link>
-        <button> Adicionar </button>    
-    </ContainerCard>
+    <>
+      {console.log(params.allPokemons)}
+      {arrayPokemons}
+    </>
+
+
   )
 }
 

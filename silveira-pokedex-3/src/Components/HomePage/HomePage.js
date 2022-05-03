@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Header from '../Header/Header'
 
 
 function HomePage() {
   return (
     <div>
-      
-      <Link to='/pokemon/pokedex'><button> Entrar! </button></Link>
+      <Header/>
+    
     </div>
   )
 }

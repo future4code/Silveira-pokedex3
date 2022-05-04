@@ -13,7 +13,12 @@ export const GetAllPokemons = (setAllPokenons, limit) => {
 export const GetPokemonData = (name, array, setPokemonData) => {
     axios.get(`${BaseUrl}pokemon/${name}`).then(response => {
         array.push(response.data)
-        array.length === 20 && setPokemonData(array)
+        if (array.length === 20) {
+            const orderedList = array.sort((a, b) => {
+                return a.id - b.id
+            })
+            setPokemonData(orderedList)
+        }
     }).catch(err => {
         console.log(err.response.data)
     })

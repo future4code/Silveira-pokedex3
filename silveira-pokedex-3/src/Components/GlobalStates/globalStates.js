@@ -6,6 +6,8 @@ export const GlobalState = (props) => {
     const [Pokemons, setPokemons] = useState([])
     const [PokemonsData, setPokemonData] = useState([])
     const [Menu, setMenu] = useState('')
+    const [MyPokemons, setMyPokemons] = useState([])
+    const [PokeDetails, setPokemonDetails] = useState({})
 
     useEffect(() => GetAllPokemons(setPokemons, 20), [])
 
@@ -20,11 +22,43 @@ export const GlobalState = (props) => {
 
     const setPage = page => setMenu(page)
 
+   
+
+    const addToMyPokemons = (id) => {
+        const pokemon = PokemonsData.find(pokemon => {
+            return pokemon.id === id
+        })
+
+        const newPokemons = [...MyPokemons, pokemon]
+        setMyPokemons(newPokemons)
+
+        const removePokemon = PokemonsData.filter(pokemon => {
+            return pokemon.id !== id
+        })
+
+        setPokemonData(removePokemon)
+    }
+
+    const getPokemonDetails = (id) => {
+        const pokemon = PokemonsData.find(pokemon => {
+            return pokemon.id === id
+        })
+        setPokemonDetails(pokemon)
+    }
+
+
     const params = {
         PokemonsData,
         setPage,
         Menu,
+        addToMyPokemons,
+        MyPokemons,
+        getPokemonDetails,
+        PokeDetails,
     }
+
+  
+    
 
     return (
         <PokemonList.Provider value={params} >

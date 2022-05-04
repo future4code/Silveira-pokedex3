@@ -1,21 +1,22 @@
-import React, { } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useContext } from 'react'
 import Card from '../CardPokemon/Card'
 import Header from '../Header/Header'
 import { PokedexContainerCards } from './styledPokedex'
+import { PokemonList } from '../GlobalStates/contexts'
 
 
 function Pokedex() {
+  const parms = useContext(PokemonList)
+
+  useEffect(() => parms.setPage('Pokedex'), [])
 
   return (
     <>
-      <Header menu={false} />
+      <Header />
       <PokedexContainerCards>
         <Card />
       </PokedexContainerCards>
     </>
-
-
   )
 }
 

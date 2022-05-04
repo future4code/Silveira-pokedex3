@@ -6,7 +6,7 @@ import { PokemonList } from '../GlobalStates/contexts'
 function Card() {
   const params = useContext(PokemonList)
 
-  const arrayPokemons = params.allPokemons && params.allPokemons.map(pokemon => {
+  const arrayPokemons = params.PokemonsData && params.PokemonsData.map(pokemon => {
     return (
       <ContainerCard key={pokemon.order}>
         <p>{pokemon.name}</p>
@@ -15,7 +15,6 @@ function Card() {
           <Link to='/pokemon/pokedexdetails'><button> Detalhes pokemon </button></Link>
           <button> Adicionar </button>
         </div>
-
       </ContainerCard>
     )
   })

@@ -22,7 +22,7 @@ export const GlobalState = (props) => {
 
     const setPage = page => setMenu(page)
 
-   
+
 
     const addToMyPokemons = (id) => {
         const pokemon = PokemonsData.find(pokemon => {
@@ -39,13 +39,12 @@ export const GlobalState = (props) => {
         setPokemonData(removePokemon)
     }
 
-    const getPokemonDetails = (id) => {
-        const pokemon = PokemonsData.find(pokemon => {
+    const getPokemonDetails = (id, place) => {
+        const pokemon = place.find(pokemon => {
             return pokemon.id === id
         })
         setPokemonDetails(pokemon)
     }
-
 
     const params = {
         PokemonsData,
@@ -56,9 +55,6 @@ export const GlobalState = (props) => {
         getPokemonDetails,
         PokeDetails,
     }
-
-  
-    
 
     return (
         <PokemonList.Provider value={params} >

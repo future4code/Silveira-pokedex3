@@ -5,8 +5,7 @@ import Header from '../Header/Header'
 function HomePage() {
   return (
     <div>
-      <Header/>
-    
+      <Header menu={'home'} />
     </div>
   )
 }

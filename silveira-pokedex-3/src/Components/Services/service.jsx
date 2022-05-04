@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BaseUrl = 'https://pokeapi.co/api/v2/'
 
-export const GetAllPokemons = (setAllPokenons, limit,) => {
+export const GetAllPokemons = (setAllPokenons, limit) => {
     axios.get(`${BaseUrl}pokemon?limit=${limit}&offset=0`).then(response => {
         setAllPokenons(response.data.results)
     }).catch(err => {

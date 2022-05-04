@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Header from '../Header/Header'
+import { PokemonList } from '../GlobalStates/contexts'
 
 
 function HomePage() {
+  const params = useContext(PokemonList)
+
+  useEffect(() => params.setPage('home'), [])
+
   return (
     <div>
-      <Header menu={'home'} />
+      <Header />
     </div>
   )
 }

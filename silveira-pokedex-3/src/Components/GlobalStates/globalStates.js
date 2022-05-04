@@ -5,7 +5,7 @@ import { GetAllPokemons, GetPokemonData } from '../Services/service';
 export const GlobalState = (props) => {
     const [Pokemons, setPokemons] = useState([])
     const [PokemonsData, setPokemonData] = useState([])
-    // const [Menu, setMenu] = useState('')
+    const [Menu, setMenu] = useState('')
 
     useEffect(() => GetAllPokemons(setPokemons, 20), [])
 
@@ -18,11 +18,13 @@ export const GlobalState = (props) => {
 
     useEffect(() => { Pokemons.length > 0 && getData() }, [Pokemons])
 
+    const setPage = page => setMenu(page)
+
     const params = {
-        allPokemons: PokemonsData,
+        PokemonsData,
+        setPage,
+        Menu,
     }
-
-
 
     return (
         <PokemonList.Provider value={params} >

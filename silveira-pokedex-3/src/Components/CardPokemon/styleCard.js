@@ -12,7 +12,8 @@ export const ContainerCard = styled.div`
     justify-content: center;
     p{
         margin: 0;
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: 700;
     }
     img{
         width: 200px;

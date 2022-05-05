@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ContainerCard } from './styleCard'
 import { PokemonList } from '../GlobalStates/contexts'
+import Button from '@mui/material/Button';
 
 function Card(props) {
   const params = useContext(PokemonList)
@@ -12,7 +13,7 @@ function Card(props) {
         <img src={pokemon.sprites.other.dream_world.front_default} />
         <div>
           <Link to='/pokemon/pokedexdetails'>
-            <button onClick={() => params.getPokemonDetails(pokemon.id, props.property)}> Detalhes pokemon </button>
+            <button onClick={() => params.getPokemonDetails(pokemon.id, props.property)}> Detalhes</button>
           </Link>
           {props.property === 'PokemonsData' ?
             <button onClick={() => params.addOrRemoveToMyPokemons(pokemon.id, props.property)}> Adicionar </button>

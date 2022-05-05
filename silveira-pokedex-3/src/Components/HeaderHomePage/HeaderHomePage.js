@@ -1,9 +1,9 @@
 import React from 'react'
-import { ContainerHeader, Red, Black, White, SuportPokeball } from './styles'
+import { ContainerHeader, Red, Black, White, SuportPokeball } from './styledHeaderHomePage'
 import { ComponetPokeball } from '../Pokeball/Pokeball'
 import Logo from '../../Assets/Imagens/pokedexLogo.png'
 
-const Header = () => {
+const HeaderHomePage = () => {
   return (
     <ContainerHeader>
       <Red></Red>
@@ -17,4 +17,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderHomePage

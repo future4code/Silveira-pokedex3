@@ -7,7 +7,7 @@ import { SuperContainerMaster, ContainerMaster, Photo1, Photo2, Stats, Types, Mo
 const PokeDetails = () => {
    const params = useContext(PokemonList)
 
-   useEffect(() => params.setPage('PokeDetais'), [])
+   useEffect(() => params.setPage('PokeDetails'), [])
 
    return (
       <SuperContainerMaster>

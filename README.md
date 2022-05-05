@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Eduardo Osiro
 - Luiz
 
-[Link](ignorant-cable.surge.sh)
+[Link](https://ignorant-cable.surge.sh/)
 
 O que funciona:
 - Item 1

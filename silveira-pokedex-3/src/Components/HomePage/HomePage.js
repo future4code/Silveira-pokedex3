@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
-import Header from '../Header/Header'
 import { PokemonList } from '../GlobalStates/contexts'
+import { HomePageContainer} from './styledHomePage'
+import HeaderHomePage from '../HeaderHomePage/HeaderHomePage'
 
 
 function HomePage() {
@@ -9,9 +10,16 @@ function HomePage() {
   useEffect(() => params.setPage('home'), [])
 
   return (
-    <div>
-      <Header />
-    </div>
+
+    <HomePageContainer>
+
+
+     <HeaderHomePage/>
+
+     
+
+    </HomePageContainer>
+
   )
 }
 

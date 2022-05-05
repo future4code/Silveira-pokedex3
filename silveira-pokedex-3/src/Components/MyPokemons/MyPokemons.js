@@ -10,7 +10,7 @@ import { PokemonList } from '../GlobalStates/contexts'
 function MyPokeDex() {
   const params = useContext(PokemonList)
 
-  useEffect(() => params.setPage('MyPoleDex'), [])
+  useEffect(() => params.setPage('MyPokeDex'), [])
 
   return (
     <div>

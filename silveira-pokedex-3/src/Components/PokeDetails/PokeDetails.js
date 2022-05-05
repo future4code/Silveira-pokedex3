@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { PokemonList } from '../GlobalStates/contexts'
 import Header from '../Header/Header'
+import {Title, ContainerMaster} from '../PokeDetails/styledPokeDetails'
+
 
 const PokeDetails = () => {
    const params = useContext(PokemonList)
@@ -10,42 +12,42 @@ const PokeDetails = () => {
    return (
       <div>
          <Header />
-         <div>
+         <ContainerMaster>
             {params.PokeDetails.name &&
                <div>
                   <div>
-                     <p>{params.PokeDetails.name}</p>
+                     <h1>{params.PokeDetails.name}</h1>
                      <img src={params.PokeDetails.sprites.front_default} />
                      <img src={params.PokeDetails.sprites.back_default} />
                   </div>
                   <div>
                      <div>
-                        <p>Status:</p>
+                        <h1>Status:</h1>
                         {params.PokeDetails.stats.map(stats => {
                            return (
                               <div key={stats.stat.name}>
-                                 <p> {stats.stat.name}: {stats.base_stat} </p>
+                                 <li> {stats.stat.name}: {stats.base_stat} </li>
                               </div>
                            )
                         })}
                      </div>
                      <div>
-                        <p>Types:</p>
+                        <h1>Types:</h1>
                         {params.PokeDetails.types.map(stats => {
                            return (
                               <div key={stats.type.name}>
-                                 <p> {stats.type.name}</p>
+                                 <li> {stats.type.name}</li>
                               </div>
                            )
                         })}
                      </div>
                      <div>
-                        <p>Moves:</p>
+                        <h1>Moves:</h1>
                         {params.PokeDetails.moves.map((stats, index) => {
                            return (
                               index < 5 &&
                               <div key={stats.move.name}>
-                                 <p> {stats.move.name}</p>
+                                 <li> {stats.move.name}</li>
                               </div>
                            )
                         })}
@@ -53,7 +55,7 @@ const PokeDetails = () => {
                   </div>
                </div>
             }
-         </div>
+         </ContainerMaster>
       </div>
    )
 }

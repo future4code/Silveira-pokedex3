@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
 import { PokemonList } from '../GlobalStates/contexts'
 import Header from '../Header/Header'
+import {ContainerMaster, Photo1, Photo2, Stats, Types, Moves } from '../PokeDetails/styledPokeDetails'
+
 
 const PokeDetails = () => {
    const params = useContext(PokemonList)
@@ -10,50 +12,54 @@ const PokeDetails = () => {
    return (
       <div>
          <Header />
-         <div>
+         <h1>{params.PokeDetails.name}</h1>
+         
             {params.PokeDetails.name &&
-               <div>
-                  <div>
-                     <p>{params.PokeDetails.name}</p>
-                     <img src={params.PokeDetails.sprites.front_default} />
-                     <img src={params.PokeDetails.sprites.back_default} />
-                  </div>
-                  <div>
-                     <div>
-                        <p>Status:</p>
+               <ContainerMaster>
+                  
+                     <Photo1>
+                        <img src={params.PokeDetails.sprites.front_default} />
+                     </Photo1>
+                     <Photo2>
+                        <img src={params.PokeDetails.sprites.back_default} />
+                     </Photo2>
+                  
+                  
+                     <Stats>
+                        <h1>Status:</h1>
                         {params.PokeDetails.stats.map(stats => {
                            return (
                               <div key={stats.stat.name}>
-                                 <p> {stats.stat.name}: {stats.base_stat} </p>
+                                 <li> {stats.stat.name}: {stats.base_stat} </li>
                               </div>
                            )
                         })}
-                     </div>
-                     <div>
-                        <p>Types:</p>
+                     </Stats>
+                     <Types>
+                        <h1>Types:</h1>
                         {params.PokeDetails.types.map(stats => {
                            return (
                               <div key={stats.type.name}>
-                                 <p> {stats.type.name}</p>
+                                 <li> {stats.type.name}</li>
                               </div>
                            )
                         })}
-                     </div>
-                     <div>
-                        <p>Moves:</p>
+                     </Types>
+                     <Moves>
+                        <h1>Moves:</h1>
                         {params.PokeDetails.moves.map((stats, index) => {
                            return (
                               index < 5 &&
                               <div key={stats.move.name}>
-                                 <p> {stats.move.name}</p>
+                                 <li> {stats.move.name}</li>
                               </div>
                            )
                         })}
-                     </div>
-                  </div>
-               </div>
+                     </Moves>
+                  
+               </ContainerMaster>
             }
-         </div>
+        
       </div>
    )
 }

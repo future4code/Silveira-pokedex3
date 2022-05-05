@@ -14,7 +14,7 @@ function Pokedex() {
     <>
       <Header />
       <PokedexContainerCards>
-        <Card batata={`PokemonsData`} place={parms.PokemonsData} />
+        <Card property={`PokemonsData`} />
       </PokedexContainerCards>
     </>
   )

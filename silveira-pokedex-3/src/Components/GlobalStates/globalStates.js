@@ -22,25 +22,30 @@ export const GlobalState = (props) => {
 
     const setPage = page => setMenu(page)
 
+    const addOrRemoveToMyPokemons = (id, property) => {
+        const dataSource = {
+            PokemonsData: [PokemonsData, setPokemonData, MyPokemons, setMyPokemons],
+            MyPokemons: [MyPokemons, setMyPokemons, PokemonsData, setPokemonData]
+        }
 
-
-    const addToMyPokemons = (id) => {
-        const pokemon = PokemonsData.find(pokemon => {
+        const pokemon = dataSource[`${property}`][0].find(pokemon => {
             return pokemon.id === id
         })
 
-        const newPokemons = [...MyPokemons, pokemon]
-        setMyPokemons(newPokemons)
+        const newPokemons = [...dataSource[`${property}`][2], pokemon]
 
-        const removePokemon = PokemonsData.filter(pokemon => {
+        dataSource[`${property}`][3](newPokemons)
+
+        const removePokemon = dataSource[`${property}`][0].filter(pokemon => {
             return pokemon.id !== id
         })
 
-        setPokemonData(removePokemon)
+        dataSource[`${property}`][1](removePokemon)
     }
 
-    const getPokemonDetails = (id, place) => {
-        const pokemon = place.find(pokemon => {
+    const getPokemonDetails = (id, property) => {
+        const dataSource = { PokemonsData, MyPokemons }
+        const pokemon = dataSource[`${property}`].find(pokemon => {
             return pokemon.id === id
         })
         setPokemonDetails(pokemon)
@@ -50,7 +55,7 @@ export const GlobalState = (props) => {
         PokemonsData,
         setPage,
         Menu,
-        addToMyPokemons,
+        addOrRemoveToMyPokemons,
         MyPokemons,
         getPokemonDetails,
         PokeDetails,

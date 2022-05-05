@@ -1,6 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../CardPokemon/Card'
+import { ContainerMyPokemonsCards } from './styledMyPokemons'
+import Header from '../Header/Header'
 import { PokemonList } from '../GlobalStates/contexts'
 
 
@@ -8,13 +10,14 @@ import { PokemonList } from '../GlobalStates/contexts'
 function MyPokeDex() {
   const params = useContext(PokemonList)
 
+  useEffect(() => params.setPage('MyPoleDex'), [])
+
   return (
     <div>
-
-      <Link to='/'><button> Home </button></Link>
-      <Link to={-1}><button> Voltar </button></Link>
-
-      <Card batata={`MyPokemons`} place={params.MyPokemons} />
+      <Header />
+      <ContainerMyPokemonsCards>
+        <Card property={`MyPokemons`} />
+      </ContainerMyPokemonsCards>
     </div>
   )
 }

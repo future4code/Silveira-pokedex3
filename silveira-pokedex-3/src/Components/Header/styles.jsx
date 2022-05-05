@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerHeader = styled.div`
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border-bottom: 5px solid black;
 `
 export const Red = styled.div`
     height: 71px;

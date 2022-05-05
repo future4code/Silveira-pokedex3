@@ -6,12 +6,33 @@ import { PokemonList } from '../GlobalStates/contexts'
 export const ComponetPokeball = () => {
     const parms = useContext(PokemonList)
 
-    const navMenuSwitc = () => {
+    const navMenuSwitch = () => {
         switch (parms.Menu) {
             case 'home':
-                return <Link to='/pokemon/pokedex'><button> Entrar! </button></Link>
+                return (
+                    <div className='OpenPokebol'>
+                        <Link to='/pokemon/pokedex'><button> Entrar! </button></Link>
+                    </div>
+                )
+            case 'MyPoleDex':
+                return (
+                    <div className='OpenPokebol'>
+                        <Link to='/'><button> Home </button></Link>
+                        <Link to={-1}><button> Voltar </button></Link>
+                    </div>
+                )
+            case 'PokeDetais':
+                return (
+                    <div className='OpenPokebol' >
+                        <Link to={-1}><button> Voltar </button></Link>
+                    </div>
+                )
             default:
-                return <Link to='/pokemon/userpokedex'><button> Minha Pokedex </button></Link>
+                return (
+                    <div className='OpenPokebol'>
+                        <Link to='/pokemon/userpokedex'><button> Minha Pokedex </button></Link>
+                    </div>
+                )
         }
     }
 
@@ -20,7 +41,7 @@ export const ComponetPokeball = () => {
             <div className="pokewrap">
                 <div className="top"></div>
                 <div className="content">
-                    {navMenuSwitc()}
+                    {navMenuSwitch()}
                 </div>
                 <div className="bottom"></div>
             </div>

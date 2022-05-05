@@ -1,48 +1,72 @@
 import styled from "styled-components";
 
-
-// export const Title = styled.div`
-// display: flex;
-// `
-
+export const SuperContainerMaster = styled.div`
+h1{
+    text-align: center;
+    font-size: 80px;
+}
+h3{
+    font-size: 50px;
+}
+`
 
 export const ContainerMaster = styled.div`
 display: grid;
-grid-template-rows: 1fr 1fr 1fr 1fr; 
-grid-template-columns: 1fr 1fr 1fr;
-// grid-template: 
-// "Photo1 Status Type"
-// "Photo1 Status Moves"
-// "Photo2 Status Moves" 
-// "Photo2 Status Moves"  
-// / 1fr 1fr 1fr;  
+padding: 20px;
+gap: 20px;
+grid-template:
+"photo1 status types" 200px
+"photo1 status moves" 200px
+"photo2 status moves" 200px
+"photo2 status moves" 200px
+/ 1fr 1fr 1fr;
+font-size: 25px;
 `
 export const Photo1 = styled.div`
-background-color: black;
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
 padding: 20px;
-grid-area: Photo1;
+grid-area: photo1;
 `
 
 export const Photo2 = styled.div`
-background-color: red;
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
 padding: 20px;
-grid-area: Photo2;
+grid-area: photo2;
 `
 
 export const Stats = styled.div`
-background-color: yellow;
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 padding: 20px;
-grid-area: Stats;
+grid-area: status;
+span{
+    font-weight: 700;
+}
 `
 
 export const Types = styled.div`
-background-color: blue;
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
 padding: 20px;
-grid-area: Types;
+grid-area: types;
 `
 
 export const Moves = styled.div`
-background-color: green;
+border: 3px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
 padding: 20px;
-grid-area: Moves;
+grid-area: moves;
 `

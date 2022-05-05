@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Adeir Moreira
+- Eduardo Osiro
+- Luiz
 
-Link do Surge: www.link.com.br
+[Link](ignorant-cable.surge.sh)
 
 O que funciona:
 - Item 1

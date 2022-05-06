@@ -48,7 +48,8 @@ export const GlobalState = (props) => {
         const pokemon = dataSource[`${property}`].find(pokemon => {
             return pokemon.id === id
         })
-        setPokemonDetails(pokemon)
+
+        setPokemonDetails([pokemon, property])
     }
 
     const params = {

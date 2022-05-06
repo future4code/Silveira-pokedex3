@@ -3,7 +3,7 @@
 Nome dos integrantes: 
 - Adeir Moreira
 - Eduardo Osiro
-- Luiz
+- Luiz Gustavo
 
 [Link](https://ignorant-cable.surge.sh/)
 

@@ -1,15 +1,26 @@
 import styled from "styled-components";
 
 export const SuperContainerMaster = styled.div`
-h1{
-    text-align: center;
-    font-size: 80px;
-}
 h3{
     font-size: 50px;
 }
 `
-
+export const ContainerTitulo = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    h1{
+    text-align: center;
+    font-size: 80px;
+    align-self: center;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+`
 export const ContainerMaster = styled.div`
 display: grid;
 padding: 20px;

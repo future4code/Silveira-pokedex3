@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import Card from '../CardPokemon/Card'
-import { ContainerMyPokemonsCards } from './styledMyPokemons'
+import { ContainerMyPokemonsCards, SuperContainerMyPokemons } from './styledMyPokemons'
 import Header from '../Header/Header'
 import { PokemonList } from '../GlobalStates/contexts'
 
@@ -13,12 +12,13 @@ function MyPokeDex() {
   useEffect(() => params.setPage('MyPokeDex'), [])
 
   return (
-    <div>
+    <SuperContainerMyPokemons>
       <Header />
+      <h2>My Pokemons</h2>
       <ContainerMyPokemonsCards>
         <Card property={`MyPokemons`} />
       </ContainerMyPokemonsCards>
-    </div>
+    </SuperContainerMyPokemons>
   )
 }
 

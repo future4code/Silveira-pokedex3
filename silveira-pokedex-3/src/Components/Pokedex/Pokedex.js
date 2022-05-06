@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import Card from '../CardPokemon/Card'
 import Header from '../Header/Header'
-import { PokedexContainerCards } from './styledPokedex'
+import { PokedexContainerCards, ContainerPokeDex } from './styledPokedex'
 import { PokemonList } from '../GlobalStates/contexts'
 
 
@@ -11,12 +11,13 @@ function Pokedex() {
   useEffect(() => parms.setPage('Pokedex'), [])
 
   return (
-    <>
+    <ContainerPokeDex>
       <Header />
+      <h2>Pokedex</h2>
       <PokedexContainerCards>
         <Card property={`PokemonsData`} />
       </PokedexContainerCards>
-    </>
+    </ContainerPokeDex>
   )
 }
 

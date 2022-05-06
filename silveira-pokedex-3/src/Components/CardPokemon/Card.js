@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ContainerCard } from './styleCard'
 import { PokemonList } from '../GlobalStates/contexts'
-import Button from '@mui/material/Button';
+
 
 function Card(props) {
   const params = useContext(PokemonList)
@@ -19,7 +19,6 @@ function Card(props) {
             <button onClick={() => params.addOrRemoveToMyPokemons(pokemon.id, props.property)}> Adicionar </button>
             :
             <button onClick={() => params.addOrRemoveToMyPokemons(pokemon.id, props.property)}> Remover </button>}
-
         </div>
       </ContainerCard>
     )

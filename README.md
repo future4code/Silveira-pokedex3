@@ -5,7 +5,7 @@ Nome dos integrantes:
 - Eduardo Osiro
 - Luiz Gustavo
 
-[Link](https://ignorant-cable.surge.sh/)
+[Link](https://projeto-pokedex3-silveira.surge.sh/)
 
 O que funciona:
 - Item 1

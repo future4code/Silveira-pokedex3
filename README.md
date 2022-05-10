@@ -1,6 +1,6 @@
 # POKEDEX
 
-##CLIQUE NA POKEBOLA PARA ABRI-LA E NAVEGAR PELO SITE
+## CLIQUE NA POKEBOLA PARA ABRI-LA E NAVEGAR PELO SITE
 
 Nome dos integrantes: 
 - Adeir Moreira
@@ -15,4 +15,3 @@ O que funciona:
 
 O que não funciona: 
 - Os Desafios
--

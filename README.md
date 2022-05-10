@@ -1,5 +1,7 @@
 # POKEDEX
 
+##CLIQUE NA POKEBOLA PARA ABRI-LA E NAVEGAR PELO SITE
+
 Nome dos integrantes: 
 - Adeir Moreira
 - Eduardo Osiro
@@ -8,9 +10,9 @@ Nome dos integrantes:
 [Link](https://projeto-pokedex3-silveira.surge.sh/)
 
 O que funciona:
-- Item 1
-- Item 2
+- add/remover da pokedex
+- add/remover a partir da pagina detalhes
 
 O que não funciona: 
-- Item 3
-- Item 4
+- Os Desafios
+-

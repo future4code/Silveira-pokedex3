@@ -5,7 +5,7 @@
 Nome dos integrantes: 
 - Adeir Moreira
 - Eduardo Osiro
-- Luiz Gustavo
+- Luis Gustavo
 
 [Link](https://projeto-pokedex3-silveira.surge.sh/)
 
